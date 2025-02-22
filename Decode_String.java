@@ -22,14 +22,14 @@ class Main {
                 stk.pop();  // Remove '['
 
                 // Step 2: Get the number (handling multi-digit cases)
-                int n = 0, base = 1;
+                int n = 0, base = 1;                                             //   taken base so it can handle multiple digits like 20[a]
                 while (!stk.isEmpty() && Character.isDigit(stk.peek())) {
                     n = (stk.pop() - '0') * base + n;
                     base *= 10;
                 }
 
                 // Step 3: Repeat and push back to stack
-                String repeatedStr = sb.toString().repeat(n);
+                String repeatedStr = sb.toString().repeat(n);  // .repeat is String class method to repeat content of string n times.
                 for (char c : repeatedStr.toCharArray()) {
                     stk.push(c);
                 }
