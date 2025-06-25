@@ -1,27 +1,26 @@
 # Multiply Num String
 
 def MultiplyStr(num1, num2):
-    n = 0
-    base = 1
-    
-    while num1>0:
-        n = n + (num1%10) * base
-        base = base * 10
-        num1 = int(num1/10)
+    n1 = int(num1)
+    n2 = int(num2)
 
-    m = 0
-    base = 1
-    
-    while num2>0:
-        m = m + (num2%10) * base
-        base = base * 10
-        num2 = int(num2/10)
-        
-    return n*m
+    return str(n1 * n2)
+
+# def MultiplyStr(num1, num2):
+#     n1 = 0
+#         for n in num1:
+#             n1 = n1 * 10 + int(n)
+
+#     n2 = 0 
+#         for m in num2:
+#             n2 = n2 * 10 + int(m)
+
+#     return str(n1*n2)
+
         
 
-num1 = 100
-num2 = 150
+num1 = '100'
+num2 = '150'
 
 result = MultiplyStr(num1, num2)
 
